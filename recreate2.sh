@@ -34,7 +34,7 @@ echo "Waiting 20s for addons to start"
 sleep 20
 
 docker tag traackr:latest localhost:32000/traackr:latest
-docker push localhost:32000/traackr:latest
+sudo docker push localhost:32000/traackr:latest
 
 # Install Traefik
 
@@ -46,6 +46,6 @@ microk8s helm3 install traefik traefik/traefik -n traefik --set service.spec.loa
 
 # Install server using HELM
 
-docker push localhost:32000/traackr:latest # Some times the first attemp fails, so re-try.
-
+sudo docker push localhost:32000/traackr:latest # Some times the first attemp fails, so re-try.
+sleep 3
 microk8s helm3 install web-traackr ./helm/traackrweb
