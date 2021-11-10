@@ -11,6 +11,7 @@ You can download the "recreate.sh", "recreate2.sh" and "recreate3.sh" scripts in
 0- Update Ubuntu
 
 sudo apt update
+
 sudo apt upgrade -y
 
 1- Install Docker
