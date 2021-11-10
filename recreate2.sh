@@ -4,6 +4,8 @@
 
 echo -e "Please enter a short range of your Local subnet (e.g: 192.168.0.30-192.168.0.40)"
 read range
+echo -e "Please select one IP in the previous range for the TRAEFIK service (e.g: 192.168.0.30)"
+read staticIP
 
 
 
@@ -36,7 +38,7 @@ docker push localhost:32000/traackr:latest
 microk8s helm3 repo add traefik https://helm.traefik.io/traefik
 microk8s helm3 repo update
 microk8s kubectl create namespace traefik
-microk8s helm3 install traefik traefik/traefik -n traefik
+microk8s helm3 install traefik traefik/traefik -n traefik --set service.spec.loadBalancerIP=$staticIP
 
 
 # Install server using HELM
