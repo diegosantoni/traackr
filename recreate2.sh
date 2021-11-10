@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Ask for a shor range of Local IPs
+
+echo -e "Please enter a short range of your Local subnet (e.g: 192.168.0.30-192.168.0.40)"
+read range
+
+
+
 # Enable Microk8s addons
 
 microk8s.enable registry
