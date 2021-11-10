@@ -5,7 +5,7 @@ Requirement
 * A fresh and updated Ubuntu 20.04 server whit internet access.
 * A user with sudo privileges
 
-You can download the "recreate.sh" and "recreate2.sh" scripts in your HOME directory and run them in order to fully recreate the challenge, or follow the steps below:
+You can download the "recreate.sh", "recreate2.sh" and "recreate3.sh" scripts in your HOME directory and run them in order to fully recreate the challenge, or follow the steps below:
 
 0- Update Ubuntu
 
