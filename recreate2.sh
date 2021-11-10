@@ -46,4 +46,6 @@ microk8s helm3 install traefik traefik/traefik -n traefik --set service.spec.loa
 
 # Install server using HELM
 
+docker push localhost:32000/traackr:latest # Some times the first attemp fails, so re-try.
+
 microk8s helm3 install web-traackr ./helm/traackrweb
