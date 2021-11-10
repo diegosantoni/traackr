@@ -19,12 +19,12 @@ microk8s.enable metallb:$range
 # Clone git repo and switch to master branch
 
 git clone https://github.com/diegosantoni/traackr.git
-
+cd traackr
 git checkout master
 
 # Build docker image
 
-docker build -t traackr ./traackr/
+docker build -t traackr .
 
 # Push de docker image to microk8s registry on localhost
 
@@ -41,4 +41,4 @@ microk8s helm3 install traefik traefik/traefik -n traefik
 
 # Install server using HELM
 
-microk8s helm3 install web-traackr ./traackr/helm/traackrweb
+microk8s helm3 install web-traackr ./helm/traackrweb
