@@ -2,7 +2,7 @@ Steps for recreate the Challenge
 --------------------------------
 
 Requirement
-* A fresh and updated Ubuntu 20.04 server
+* A fresh and updated Ubuntu 20.04 server whit internet access.
 
 
 0- Update Ubuntu
