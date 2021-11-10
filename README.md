@@ -1,7 +1,8 @@
 Steps for recreate the Challenge
 --------------------------------
 
-Requirement
+Requirements
+
 * A fresh and updated Ubuntu 20.04 server whit internet access.
 * A user with sudo privileges
 
