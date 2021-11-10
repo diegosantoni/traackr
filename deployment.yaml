@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-traakr
+spec:
+  selector:
+    matchLabels:
+      run: web-traakr
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: web-traakr
+    spec:
+      containers:
+      - name: web-traakr
+        image: localhost:32000/traackr:latest
+        ports:
+        - containerPort: 80
+
