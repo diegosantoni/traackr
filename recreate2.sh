@@ -30,6 +30,9 @@ docker build -t traackr .
 
 # Push de docker image to microk8s registry on localhost
 
+echo "Waiting 20s for addons to start"
+sleep 20
+
 docker tag traackr:latest localhost:32000/traackr:latest
 docker push localhost:32000/traackr:latest
 
