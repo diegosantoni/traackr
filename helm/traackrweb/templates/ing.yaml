@@ -20,3 +20,13 @@ spec:
             name: web-traackr 
             port:
               number: 80
+  - host: traackr.santoni.com.ar
+    http:
+      paths:
+      - path: /
+        pathType: Exact
+        backend:
+          service:
+            name: web-traackr 
+            port:
+              number: 80
