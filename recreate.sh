@@ -22,5 +22,5 @@ sudo snap install microk8s --classic
 sudo usermod -a -G microk8s $USER
 sudo chown -f -R $USER ~/.kube
 
-echo "Now excecute recreate2.sh"
+echo "Ingress your password and excecute recreate2.sh"
 su - $USER
