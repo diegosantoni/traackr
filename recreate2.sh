@@ -34,7 +34,12 @@ echo "Waiting 20s for addons to start"
 sleep 20
 
 docker tag traackr:latest localhost:32000/traackr:latest
-sudo docker push localhost:32000/traackr:latest
+
+for n in {1..3}; do
+    sudo docker push  localhost:32000/traackr:latest && break;
+done
+
+# sudo docker push localhost:32000/traackr:latest
 
 # Install Traefik
 
