@@ -1,8 +1,7 @@
 Steps for recreate the Challenge
+--------------------------------
 
 Requirement
------------
-
 * A fresh and updated Ubuntu 20.04 server
 
 
