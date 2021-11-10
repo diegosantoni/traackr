@@ -3,7 +3,9 @@ Steps for recreate the Challenge
 
 Requirement
 * A fresh and updated Ubuntu 20.04 server whit internet access.
+* A user with sudo privileges
 
+You can download the "recreate.sh" and "recreate2.sh" scripts to your HOME directory and run they in orde to recreate de challenge completely, or follow the nexts steeps:
 
 0- Update Ubuntu
 
@@ -45,7 +47,11 @@ docker build -t traackr .
 
 6- Push de docker image to microk8s registry on localhost
 
+echo "Waiting 40s for addons to start"
+sleep 40
+
 docker tag traackr:latest localhost:32000/traackr:latest
+sleep 5
 docker push localhost:32000/traackr:latest
 
 8- Install Traefik
