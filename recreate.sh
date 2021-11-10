@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Ask for a shor range of Local IPs
+
+echo -e "Please enter a short range of your Local subnet (e.g: 192.168.0.30-192.168.0.40)"
+read range
+
 # Update Ubuntu
 
 sudo apt update
@@ -24,7 +29,7 @@ su - $USER
 microk8s.enable registry
 microk8s.enable dns
 microk8s.enable helm3
-microk8s.enable metallb:192.168.100.30-192.168.100.40
+microk8s.enable metallb:$range
 
 # For metallb IP Range, choose a short range of your local network
 
